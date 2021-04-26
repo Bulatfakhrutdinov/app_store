@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+    background: #ededed;
+    border-bottom: #858585;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.app_link {
+    font-size: 26px;
+}

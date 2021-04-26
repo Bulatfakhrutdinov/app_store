@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин приложений</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+{% include 'current_user_header.html' %}
+    {% for project in projects %}
+        <img src="/static/img/{{ project.photo }}" width="50" height="50" alt="фото приложения" style="float:left;">
+        <br>
+        <a href="/app/{{ project.id }}" class="app_link" ><center>{{ project.project_name }} {{ project.size }}</center></a>
+
+        <hr>
+    {% endfor %}
+</body>
+</html>

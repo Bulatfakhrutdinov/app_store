@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ project.project_name }}</title>
+</head>
+<body>
+{% include 'current_user_header.html' %}
+<h2 align="center">{{ project.project_name }}</h2>
+<img src="/static/img/{{ project.photo }}" width="150" height="150" alt="фото приложения" style="float:left;">
+<p>{{ project.text }}</p>
+<br>
+<a href="/download/{{ project.id }}"><img src="/static/img/download.png" alt="кнопка скачать" width="150"></a>
+</body>
+</html>

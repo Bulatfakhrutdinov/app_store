@@ -1,0 +1,18 @@
+<h1>Вход</h1>
+<br>
+
+<form method="post" action="/sign_in_user"  style="max-width: 500px;">
+    <label>ЛОГИН</label><br>
+    <input type="tel" name="login"/>
+    <br>
+    <br>
+    <label>Пароль</label><br>
+    <input type="password" name="password" />
+    <p style="color: #f00;">{{status}}</p>
+    <br>
+    <br>
+    <div style="display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: space-between;">
+        <input type="submit" />
+        <a href="/sign_up">Регистрация</a>
+    </div>
+</form>

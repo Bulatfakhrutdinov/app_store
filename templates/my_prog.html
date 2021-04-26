@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+     crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
+    <title>Загрузка приложения</title>
+  </head>
+  <body>
+    <h1>Загрузим приложение</h1>
+    <form method="post" enctype="multipart/form-data">
+     <p>
+        {{ form.project_name.label }}<br>
+        {{ form.project_name(class="form-control", type="text") }}<br>
+        {% for error in form.project_name.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.text.label }}<br>
+        {{ form.text(class="form-control", type="text") }}<br>
+        {% for error in form.text.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+         <div class="form-group">
+            <label for="photo">Выберите фото иконки приложения</label>
+            <input type="file" class="form-control-file" id="photo" accept="image/*,image/jpeg" name="photo">
+        </div>
+        <br>
+       <div class="form-group">
+            <label for="file_input">Выберите файл</label>
+            <input type="file" class="form-control-file" id="file_input"  accept=".zip,.rar,.7zip" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+<!--        <a href="/" class="btn btn-primary">Добавить</a>-->
+    </form>
+  </body>
+</html>

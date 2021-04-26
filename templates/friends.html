@@ -1,0 +1,10 @@
+{% include 'current_user_header.html' %}
+
+<h1>Друзья</h1>
+<table>
+    {% for user in users %}
+        <tr>
+            <td>{{user.cell}}</td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,17 @@
+{% include 'current_user_header.html' %}
+
+<h1>Пользователи</h1>
+<table>
+    {% for user in users %}
+        <tr>
+            <td>{{user.cell}}</td>
+            <td>
+                {% if current_user %}
+                    {% if current_user.id != user.id %}
+                        <a href="/users/add_user/{{user.id}}">Добавить в друзья</a>
+                    {% endif %}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
